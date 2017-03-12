@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aqianduan.github.io/"/>
-  <updated>2017-03-12T10:42:42.515Z</updated>
+  <updated>2017-03-12T13:12:46.895Z</updated>
   <id>http://aqianduan.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS3布局</title>
+    <link href="http://aqianduan.github.io/blog/2017/03/12/CSS3%E5%B8%83%E5%B1%80/"/>
+    <id>http://aqianduan.github.io/blog/2017/03/12/CSS3布局/</id>
+    <published>2017-03-12T12:58:24.000Z</published>
+    <updated>2017-03-12T13:12:46.895Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h1 id="弹性布局：flexbox"><a href="#弹性布局：flexbox" class="headerlink" title="弹性布局：flexbox"></a>弹性布局：flexbox</h1><p>优点：<br>1 适应性强，在做不同屏幕分辨率的界面时非常实用<br>2 可以随意按照宽度、比例划分元素的宽高<br>3 可以轻松改变元素的显示顺序<br>4 弹性布局实现快捷，易维护</p>
+<p>display : box； 将一个元素的子元素以弹性布局进行布局<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">display : box；</div><div class="line">display : flexbox；    </div><div class="line">display : flex；</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">box-orient：horizontal(横向) | vertical(竖向) | inherit(继承)   子元素的排列方式</div><div class="line">box-direction：normal(正常 ) | reverse(反向) | inherit(继承)  子元素的排列顺序</div><div class="line">box-align：start(靠左) | end(靠右) | center(居中)   子元素的对齐方式</div><div class="line">box-pack：start(顶部) | end(底部) | center(居中)   子元素的对齐方式</div></pre></td></tr></table></figure>
+<p>子元素如何分配剩余空间<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">box-flex：number ;</div></pre></td></tr></table></figure></p>
+<p>在默认情况下，盒子并不具有弹性。如果对box-flex的属性值进行了设置，则变得富有弹性<br>如果没有固定盒子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">子盒大小  = 父盒大小 * (子盒box-flex值 / 所有子盒box-flex值之和)</div></pre></td></tr></table></figure></p>
+<blockquote><p>属性总结:</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://aqianduan.github.io/blog/2017/03/12/CSS3布局/" title="CSS3布局">CSS3布局</a><br>文章作者：<a href="https://aqianduan.github.io/" title="Brian.M">Brian.M</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;弹性布局：flexbox&quot;&gt;&lt;a href=&quot;#弹性布局：flexbox&quot; class=&quot;headerlink&quot; title=&quot;弹性布局：flexbox&quot;&gt;&lt;/a&gt;弹性布局：flexbox&lt;/h1&gt;&lt;p&gt;优点：&lt;br&gt;1 适应性
+    
+    </summary>
+    
+      <category term="CSS3" scheme="http://aqianduan.github.io/categories/CSS3/"/>
+    
+    
+      <category term="CSS3布局" scheme="http://aqianduan.github.io/tags/CSS3%E5%B8%83%E5%B1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>移动端适配</title>
