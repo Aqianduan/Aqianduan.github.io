@@ -2,8 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+    
   <url>
-    <loc>http://yoursite.com/2017/03/12/hello-world/</loc>
+    <loc>http://aqianduan.github.io/blog/2017/03/12/hello-world/</loc>
     <lastmod>2017-03-12T05:54:08.336Z</lastmod>
     <data>
         <display>
@@ -16,4 +17,6 @@
     </data>
     </url>
 
+    
+    
 </urlset>

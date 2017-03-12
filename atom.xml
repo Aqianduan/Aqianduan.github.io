@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>My Life</title>
-  
+  <subtitle>纸上得来终觉浅，绝知此事要躬行</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://aqianduan.github.io/"/>
   <updated>2017-03-12T05:54:08.336Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://aqianduan.github.io/</id>
   
   <author>
-    <name>Blen.M</name>
+    <name>Blan.M</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/03/12/hello-world/"/>
-    <id>http://yoursite.com/2017/03/12/hello-world/</id>
+    <link href="http://aqianduan.github.io/blog/2017/03/12/hello-world/"/>
+    <id>http://aqianduan.github.io/blog/2017/03/12/hello-world/</id>
     <published>2017-03-12T05:54:08.336Z</published>
     <updated>2017-03-12T05:54:08.336Z</updated>
     
