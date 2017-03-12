@@ -5,11 +5,11 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aqianduan.github.io/"/>
-  <updated>2017-03-12T09:41:57.026Z</updated>
+  <updated>2017-03-12T10:02:26.068Z</updated>
   <id>http://aqianduan.github.io/</id>
   
   <author>
-    <name>Blan.M</name>
+    <name>Brian.M</name>
     
   </author>
   
@@ -20,7 +20,7 @@
     <link href="http://aqianduan.github.io/blog/2017/03/12/H5%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/"/>
     <id>http://aqianduan.github.io/blog/2017/03/12/H5的新特性/</id>
     <published>2017-03-12T08:15:51.000Z</published>
-    <updated>2017-03-12T09:41:57.026Z</updated>
+    <updated>2017-03-12T10:02:26.068Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center">“没有人愿意使用Flash，全球已经开始步入H5时代”<br>    —乔布斯</blockquote>
 
@@ -37,7 +37,7 @@
 <p>src 属性：指定播放文件的URL。</p>
 <p>video标签的出现可以让我们不用考虑用户是否有flash<br>video支持的视频格式：MP4、WebM、Ogg<br>Ps：并不是所有的浏览器都支持MP4格式<br>解决方法：<br>视频 mp4 格式适用于IE、chrome 和 Safari，要确保视频在Firefox与Opera中也能够正常播放需要source元素<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;video src=<span class="string">""</span> width=<span class="string">""</span> height=<span class="string">""</span>&gt;</div><div class="line">	&lt;<span class="built_in">source</span> src=<span class="string">"move.ogg"</span> <span class="built_in">type</span>=<span class="string">"video/ogg"</span>&gt;&lt;/<span class="built_in">source</span>&gt;</div><div class="line">	&lt;<span class="built_in">source</span> src=<span class="string">"move.mp4"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;&lt;/<span class="built_in">source</span>&gt;</div><div class="line">	你的浏览器不支持视频播放</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure></p>
 <h2 id="video的常用属性"><a href="#video的常用属性" class="headerlink" title="video的常用属性"></a>video的常用属性</h2><p>controls 属性：用户将鼠标悬停至正在播放的视频时，显示工具条；一但移开，工具条件就会隐藏<br>autoplay 属性：一旦视频就绪马上开始自动播放。<br>loop 属性:视频结束后将重新开始播放。<br>muted 属性: 如果出现该属性，则输出为静音。<br>poster 属性:将在视频文件播放前显示图片（广告图片）。</p>
-<p>preload 属性：是否在页面加载后载入视频 ( 预加载 )    如有autoplay属性则进行忽略<br>Ps：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">preload 可能值：</div><div class="line">			auto （默认） :  当页面加载后载入整个视频</div><div class="line">			metadata :  只加载播放文件的元信息（如：尺寸、持续时间、第一帧信息、曲目列表等） </div><div class="line">			none :  当页面加载后不载入视频</div></pre></td></tr></table></figure></p>
+<p>preload 属性：是否在页面加载后载入视频 ( 预加载 )    如有autoplay属性则进行忽略<br>Ps：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">preload 可能值：</div><div class="line">   auto （默认） :  当页面加载后载入整个视频</div><div class="line">   metadata :  只加载播放文件的元信息（如：尺寸、持续时间、第一帧信息、曲目列表等） </div><div class="line">   none :  当页面加载后不载入视频</div></pre></td></tr></table></figure></p>
 <h2 id="video常用属性方法"><a href="#video常用属性方法" class="headerlink" title="video常用属性方法"></a>video常用属性方法</h2><p>duration：整个媒体文件的播放时长，以s为单位。<br>currentTime：当前播放时间，以s为单位。<br>paused：如果媒体文件当前被暂停，则返回true。<br>load ( ) 方法：用于重新加载src指定的媒体文件。<br>pause ( ) 方法：用于暂停正在播放中的媒体文件。<br>play ( ) 方法：用于播放媒体文件。</p>
 <h2 id="video的常用事件"><a href="#video的常用事件" class="headerlink" title="video的常用事件"></a>video的常用事件</h2><p>error————–请求数据时遇到错误时触发<br>play—————开始播放时触发<br>pause————-暂停时触发<br>timeupdate——-播放时间改变时触发<br>ended————-播放结束时触发<br>volumechange—-音量改变时触发<br>Ps：可以使用addEventListener 方法来对事件发生进行监听。</p>
 <h1 id="audio出现了"><a href="#audio出现了" class="headerlink" title="audio出现了"></a>audio出现了</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;audio  src=<span class="string">""</span> controls&gt; &lt;/audio&gt;</div><div class="line">     src：音乐的URL</div><div class="line">     controls：浏览器自带的控制条</div><div class="line">示例：&lt;audio src=<span class="string">"01.mp3"</span> controls&gt;&lt;/audio&gt;</div></pre></td></tr></table></figure>
@@ -48,6 +48,31 @@
 <h2 id="canvas标签的基本结构"><a href="#canvas标签的基本结构" class="headerlink" title="canvas标签的基本结构"></a>canvas标签的基本结构</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"200"</span> height=<span class="string">"200"</span>&gt;&lt; /canvas&gt;</div></pre></td></tr></table></figure>
 <p>canvas元素自身有两个属性：width和height，除此之外，canvas还拥有所有主要的HTML5属性，比如说class、id和 name等。id属性被用在上面所示的代码中，JavaScript使用这里创建的canvas的id来表示要在上面绘画的画布。JavaScript使用document.getElementById()方法来确定正确的画布，如下面代码所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var cvs = document.getElementById(<span class="string">"myCanvas"</span>);</div></pre></td></tr></table></figure></p>
 <p>Ps:IE 6 7 8不支持 <canvas>标签</canvas></p>
+<p>每个画布都必须要有一个context（上下文）的定义，如下面代码所示。就目前的情况来说，官方规范只承认一个2D环境：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var ctx = cvs.getContext(<span class="string">"2d"</span>);</div></pre></td></tr></table></figure></p>
+<p>在标识画布并指明了它的上下文之后，就可以开始绘画了</p>
+<h2 id="绘制图形的流程"><a href="#绘制图形的流程" class="headerlink" title="绘制图形的流程"></a>绘制图形的流程</h2><p>哈喽~~<br>告诉大家我要开始绘画了<br>确定要绘制的起点<br>……<br>确定要绘制的终点<br>路径绘制结束<br>确定画笔的样式<br>使用设置好的画笔描边或者填色</p>
+<p>现在用代码实现刚刚说的<br>首先我们要开始一个路径<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.beginPath();</div></pre></td></tr></table></figure></p>
+<p>路径移到画布中指定的点，也就是我们的起点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.moveTo(x,y);</div></pre></td></tr></table></figure></p>
+<p>然后添加一个新点，画线<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.lineTo(x,y);</div></pre></td></tr></table></figure></p>
+<p>画完了要关闭路径<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.closePath();</div></pre></td></tr></table></figure></p>
+<p>开始填充颜色<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.fillStyle</div></pre></td></tr></table></figure></p>
+<p>开始填充绘制好的路径<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.fill()</div></pre></td></tr></table></figure></p>
+<p>设置画线的宽度<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.lineWidth</div></pre></td></tr></table></figure></p>
+<p>用来设置描边颜色<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.strokeStyle</div></pre></td></tr></table></figure></p>
+<p>绘制已定义好的路径<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.stroke()</div></pre></td></tr></table></figure></p>
+<p>ok，画图完毕</p>
+<h2 id="绘制矩形"><a href="#绘制矩形" class="headerlink" title="绘制矩形"></a>绘制矩形</h2><p>rect(x,y,w,h)：x、y为起始坐标，w、h为矩形的宽、高<br>支持这么写：<br>ctx.fillRect(x,y,w,h)   及   ctx.strokeRect(x,y,w,h)</p>
+<h2 id="绘制圆形"><a href="#绘制圆形" class="headerlink" title="绘制圆形"></a>绘制圆形</h2><p>arc(x,y,r,sa,ea,true/false)：<br>x、y为圆心坐标，r为半径，<br>sa、ea分别为起始角度和结束角度，<br>true是逆时针画圆，false是顺时针画圆；<br>360度角即2PI弧度，1度就是2PI/360=PI/180弧度，<br>90度就是2PI/360*90=PI/2弧度(其他的角度自行计算)</p>
+<h2 id="绘制文字"><a href="#绘制文字" class="headerlink" title="绘制文字"></a>绘制文字</h2><p>方法：<br>fillText(text,x,y,maxWidth): 填充绘制<br>text表示文字      x、y为坐标<br>maxWidth可选，为文字最大宽度，防止文字溢出</p>
+<p>strokeText(text,x,y,maxWidth): 描边绘制<br>text表示文字      x、y为坐标<br>maxWidth可选，为文字最大宽度，防止文字溢出；</p>
+<h3 id="常用的属性"><a href="#常用的属性" class="headerlink" title="常用的属性"></a>常用的属性</h3><p>font 文本内容的当前字体属性<br>示例: ctx.font = ‘bold 60px 微软雅黑’;</p>
+<p>textAlign 文本内容的当前对齐方式<br>示例: ctx.textAlign=“left/center/right”; </p>
+<p>textBaseline 绘制文本时使用的当前文本基线<br>示例: ctx.textBaseline=“ top/middle/ bottom ”;</p>
+<h2 id="清除画布"><a href="#清除画布" class="headerlink" title="清除画布"></a>清除画布</h2><p>既然能够绘制图形，我们也能清除<br>清除canvas方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.clearRect(x,y,width,height)</div></pre></td></tr></table></figure></p>
+<p>x : 清除起点横坐标<br>y : 清除起点纵坐标<br>width : 清除长度<br>height : 清除高度<br>清除画布：<br>ctx.clearRect(0,0,cvs.width,cvs.height);</p>
+<h2 id="图形的组合方式"><a href="#图形的组合方式" class="headerlink" title="图形的组合方式"></a>图形的组合方式</h2><p>新画图形是压在原图形上或者原图覆盖新图形等等一系列新图与原图形的结合方式叫做图形的组合，大概分为十一种方式。<br>比如：显示新图覆盖原图、或者只显示原图和新图相重叠部分等等。</p>
+<p>globalCompositeOperation属性  控制图形的组合方式</p>
+<p>这个属性归getContext(‘2d’)所创建的对象所有</p>
 <hr>
 <blockquote>
 <p>文章标题：<a href="http://aqianduan.github.io/blog/2017/03/12/H5的新特性/" title="H5">H5</a><br>文章作者：<a href="https://aqianduan.github.io/" title="Brian.M">Brian.M</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
