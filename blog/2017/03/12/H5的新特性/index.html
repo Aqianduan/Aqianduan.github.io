@@ -1,0 +1,738 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML5," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="My Life" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="“没有人愿意使用Flash，全球已经开始步入H5时代”    —乔布斯">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5">
+<meta property="og:url" content="http://aqianduan.github.io/blog/2017/03/12/H5的新特性/index.html">
+<meta property="og:site_name" content="My Life">
+<meta property="og:description" content="“没有人愿意使用Flash，全球已经开始步入H5时代”    —乔布斯">
+<meta property="og:updated_time" content="2017-03-12T09:33:03.252Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5">
+<meta name="twitter:description" content="“没有人愿意使用Flash，全球已经开始步入H5时代”    —乔布斯">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> H5 | My Life </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?55fb69a89764aa093a03446cfababa72";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">My Life</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">纸上得来终觉浅，绝知此事要躬行</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                H5
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-12T16:15:51+08:00" content="2017-03-12">
+              2017-03-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2017/03/12/H5的新特性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="blog/2017/03/12/H5的新特性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">阅读次数
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center">“没有人愿意使用Flash，全球已经开始步入H5时代”<br>    —乔布斯</blockquote>
+
+
+<a id="more"></a>
+<p>2014年10月29日，万维网联盟泪流满面地宣布，经过几乎8年的艰辛努力，HTML5标准规范终于最终制定完成了，并已公开发布。这一刻web世界已经发生了巨大的改变。<br>HTML5代表着Web发展的未来方向。无论大家身为开发人员还是高级用户，关于这一Web编程新基础的种种态势都得到了各位的关注。时至今日，网络银行、实时视频聊天以及短视频共享已经成为Web领域的立足根基，而接下来还将有更多极具突破性的趋势及成果不断涌现。</p>
+<h1 id="HTML5的新特性"><a href="#HTML5的新特性" class="headerlink" title="HTML5的新特性"></a>HTML5的新特性</h1><p>增加了新的语义化标签：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;header&gt;-----定义页眉</div><div class="line">&lt;nav&gt;---------定义导航</div><div class="line">&lt;article&gt;------定义外部的内容</div><div class="line">&lt;section&gt;-----定义章节、区段</div><div class="line">&lt;aside&gt;-------定义当前页面或文章的附属信息部分&lt;footer&gt;------定义页脚</div><div class="line">&lt;hgroup&gt;-----定义网页标题元素（h1-h6）的组合</div><div class="line">&lt;figure&gt;-------定义媒介内容的分组，以及它们的标题</div><div class="line">&lt;figcaption&gt;--定义 figure 元素的标题</div></pre></td></tr></table></figure></p>
+<h2 id="增添了input的属性、类型："><a href="#增添了input的属性、类型：" class="headerlink" title="增添了input的属性、类型："></a>增添了input的属性、类型：</h2><p>input新属性：<br>placeholder: 占位符，输入框提示信息<br>required: 该input为必填项<br>autofocus: 在页面加载时，域自动地获得焦点<br>pattern: 正则验证  如:  pattern=”[0-9]{7,12}”<br>min/max: input能输入的最小/最大字节的长度<br>step: 针对number和range类型，每次递增step的值<br>list: 指定一个datalist，作为下拉提示单</p>
+<p>input的新类型：<br>email: 提交表单时检测值是否是一个电子邮件格式<br>url: 提交表单时检测值是否是一个url格式<br>date: 年-月-日格式的控件<br>time: 时:分格式的控件<br>datetime: 年-月-日 时:分 格式的控件（UTC时间）<br>datetime-local: 年-月-日 时:分 格式的控件（本地时间）<br>month: 年-月格式的控件<br>week: 年-周数格式的控件<br>number: 数字输入框<br>range: 选择区域<br>tel: 电话输入框<br>search: 用于搜索<br>color: 调用系统选色器</p>
+<h2 id="强化了form表单"><a href="#强化了form表单" class="headerlink" title="强化了form表单"></a>强化了form表单</h2><h1 id="video出现果断抛弃flash"><a href="#video出现果断抛弃flash" class="headerlink" title="video出现果断抛弃flash"></a>video出现果断抛弃flash</h1><p>以往的网络如果播放视频等，需要flash插件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;object&gt; 标签的作用是在 HTML 页面中嵌入多媒体元素</div><div class="line">&lt;object data=<span class="string">"1.swf"</span> width=<span class="string">"400"</span>&gt;&lt;/object&gt;</div><div class="line"></div><div class="line">&lt;embed&gt; 标签的作用是在 HTML 页面中嵌入多媒体元素</div><div class="line">&lt;embed src=<span class="string">"1.swf"</span> width=<span class="string">"400"</span>&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="flash存在的问题"><a href="#flash存在的问题" class="headerlink" title="flash存在的问题"></a>flash存在的问题</h2><p>如果浏览器不支持flash那么视频就无法播放<br>iPad 和 iPhone 不能显示 Flash 视频<br>将视频转换为其他格式，仍然不能在所有浏览器中播放<br>目前安卓4.4也抛弃了flash……</p>
+<h2 id="HTML5的video标签"><a href="#HTML5的video标签" class="headerlink" title="HTML5的video标签"></a>HTML5的video标签</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;video width=<span class="string">" "</span> height=<span class="string">""</span> src=<span class="string">""</span>&gt; &lt;/video&gt;</div></pre></td></tr></table></figure>
+<p>width、height属性：<br>设置媒体元素的大小，单位为像素；<br>省略该属性，则使用播放源文件的大小；<br>仅设置宽度值，将根据播放源文件的长宽比例自动生成一个与之对应的高度值。</p>
+<p>src 属性：指定播放文件的URL。</p>
+<p>video标签的出现可以让我们不用考虑用户是否有flash<br>video支持的视频格式：MP4、WebM、Ogg<br>Ps：并不是所有的浏览器都支持MP4格式<br>解决方法：<br>视频 mp4 格式适用于IE、chrome 和 Safari，要确保视频在Firefox与Opera中也能够正常播放需要source元素<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;video src=<span class="string">""</span> width=<span class="string">""</span> height=<span class="string">""</span>&gt;</div><div class="line">	&lt;<span class="built_in">source</span> src=<span class="string">"move.ogg"</span> <span class="built_in">type</span>=<span class="string">"video/ogg"</span>&gt;&lt;/<span class="built_in">source</span>&gt;</div><div class="line">	&lt;<span class="built_in">source</span> src=<span class="string">"move.mp4"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;&lt;/<span class="built_in">source</span>&gt;</div><div class="line">	你的浏览器不支持视频播放</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="video的常用属性"><a href="#video的常用属性" class="headerlink" title="video的常用属性"></a>video的常用属性</h2><p>controls 属性：用户将鼠标悬停至正在播放的视频时，显示工具条；一但移开，工具条件就会隐藏<br>autoplay 属性：一旦视频就绪马上开始自动播放。<br>loop 属性:视频结束后将重新开始播放。<br>muted 属性: 如果出现该属性，则输出为静音。<br>poster 属性:将在视频文件播放前显示图片（广告图片）。</p>
+<p>preload 属性：是否在页面加载后载入视频 ( 预加载 )    如有autoplay属性则进行忽略<br>Ps：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">preload 可能值：auto （默认） :  当页面加载后载入整个视频</div><div class="line">				metadata :  只加载播放文件的元信息（如：尺寸、持续时间、第一帧信息、曲目列表等） </div><div class="line"> 				none :  当页面加载后不载入视频</div></pre></td></tr></table></figure></p>
+<h2 id="video常用属性方法"><a href="#video常用属性方法" class="headerlink" title="video常用属性方法"></a>video常用属性方法</h2><p>duration：整个媒体文件的播放时长，以s为单位。<br>currentTime：当前播放时间，以s为单位。<br>paused：如果媒体文件当前被暂停，则返回true。<br>load ( ) 方法：用于重新加载src指定的媒体文件。<br>pause ( ) 方法：用于暂停正在播放中的媒体文件。<br>play ( ) 方法：用于播放媒体文件。</p>
+<h2 id="video的常用事件"><a href="#video的常用事件" class="headerlink" title="video的常用事件"></a>video的常用事件</h2><p>error————–请求数据时遇到错误时触发<br>play—————开始播放时触发<br>pause————-暂停时触发<br>timeupdate——-播放时间改变时触发<br>ended————-播放结束时触发<br>volumechange—-音量改变时触发<br>Ps：可以使用addEventListener 方法来对事件发生进行监听。</p>
+<h1 id="audio出现了"><a href="#audio出现了" class="headerlink" title="audio出现了"></a>audio出现了</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;audio  src=<span class="string">""</span> controls&gt; &lt;/audio&gt;</div><div class="line">     src：音乐的URL</div><div class="line">     controls：浏览器自带的控制条</div><div class="line">示例：&lt;audio src=<span class="string">"01.mp3"</span> controls&gt;&lt;/audio&gt;</div></pre></td></tr></table></figure>
+<h2 id="audio支持情况"><a href="#audio支持情况" class="headerlink" title="audio支持情况"></a>audio支持情况</h2><p>目前audio元素支持三种格式：MP3、Wav、Ogg</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">浏览器			MP3		Wav		Ogg</div><div class="line">IE 9+ 			yes		no		no</div><div class="line">Chrome 6+ 		yes		yes		yes</div><div class="line">Firfox 3.6+ 		no		yes		yes</div><div class="line">Safari 5+ 		yes		yes		no</div><div class="line">Oprea 10+ 		no		yes		yes</div></pre></td></tr></table></figure>
+<h2 id="audio常用属性"><a href="#audio常用属性" class="headerlink" title="audio常用属性"></a>audio常用属性</h2><p>audio的常用属性和方法与video基本一样<br>如：play( ) 、pause( ) 、autoplay、controls……..</p>
+<h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1><p><canvas> 标签是 HTML 5 中的新标签。</canvas></p>
+<h2 id="canvas标签的基本结构"><a href="#canvas标签的基本结构" class="headerlink" title="canvas标签的基本结构"></a>canvas标签的基本结构</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"200"</span> height=<span class="string">"200"</span>&gt;&lt; /canvas&gt;</div></pre></td></tr></table></figure>
+<p>canvas元素自身有两个属性：width和height，除此之外，canvas还拥有所有主要的HTML5属性，比如说class、id和 name等。id属性被用在上面所示的代码中，JavaScript使用这里创建的canvas的id来表示要在上面绘画的画布。JavaScript使用document.getElementById()方法来确定正确的画布，如下面代码所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var cvs = document.getElementById(<span class="string">"myCanvas"</span>);</div></pre></td></tr></table></figure></p>
+<p>Ps:IE 6 7 8不支持 <canvas>标签</canvas></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://aqianduan.github.io/blog/2017/03/12/H5的新特性/" title="H5">H5</a><br>文章作者：<a href="https://aqianduan.github.io/" title="Brian.M">Brian.M</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5/" rel="tag">#HTML5</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2017/03/12/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="blog/2017/03/12/H5的新特性/"
+     data-title="H5"
+     data-content=""
+     data-url="http://aqianduan.github.io/blog/2017/03/12/H5的新特性/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">新浪微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-renren" href="javascript:void(0);" data-service="renren">人人网</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      <li><a class="ds-facebook" href="javascript:void(0);" data-service="facebook">Facebook</a></li>
+      <li><a class="ds-twitter" href="javascript:void(0);" data-service="twitter">Twitter</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="blog/2017/03/12/H5的新特性/"
+           data-title="H5" data-url="http://aqianduan.github.io/blog/2017/03/12/H5的新特性/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Blan.M" />
+          <p class="site-author-name" itemprop="name">Blan.M</p>
+          <p class="site-description motion-element" itemprop="description">一天一个爪印</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="/about/#联系我" target="_blank" title="Email">
+                  
+                    <i class="fa fa-envelope"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5的新特性"><span class="nav-number">1.</span> <span class="nav-text">HTML5的新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#增添了input的属性、类型："><span class="nav-number">1.1.</span> <span class="nav-text">增添了input的属性、类型：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强化了form表单"><span class="nav-number">1.2.</span> <span class="nav-text">强化了form表单</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#video出现果断抛弃flash"><span class="nav-number">2.</span> <span class="nav-text">video出现果断抛弃flash</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#flash存在的问题"><span class="nav-number">2.1.</span> <span class="nav-text">flash存在的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5的video标签"><span class="nav-number">2.2.</span> <span class="nav-text">HTML5的video标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#video的常用属性"><span class="nav-number">2.3.</span> <span class="nav-text">video的常用属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#video常用属性方法"><span class="nav-number">2.4.</span> <span class="nav-text">video常用属性方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#video的常用事件"><span class="nav-number">2.5.</span> <span class="nav-text">video的常用事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#audio出现了"><span class="nav-number">3.</span> <span class="nav-text">audio出现了</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#audio支持情况"><span class="nav-number">3.1.</span> <span class="nav-text">audio支持情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#audio常用属性"><span class="nav-number">3.2.</span> <span class="nav-text">audio常用属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Canvas"><span class="nav-number">4.</span> <span class="nav-text">Canvas</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#canvas标签的基本结构"><span class="nav-number">4.1.</span> <span class="nav-text">canvas标签的基本结构</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Blan.M</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客共字</span>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"> 站点总访问量</i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"aqianduan"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+  <!--
+  <script type="text/javascript" src="/js/src/quietflow.js"></script>
+  <script type="text/javascript">
+    $("body").quietflow();
+  </script>
+  -->
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+</body>
+</html>
