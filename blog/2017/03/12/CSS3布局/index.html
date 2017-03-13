@@ -82,22 +82,16 @@
 
 
 
-<meta name="description" content="弹性布局：flexbox优点：1 适应性强，在做不同屏幕分辨率的界面时非常实用2 可以随意按照宽度、比例划分元素的宽高3 可以轻松改变元素的显示顺序4 弹性布局实现快捷，易维护
-display : box； 将一个元素的子元素以弹性布局进行布局123display : box；display : flexbox；    display : flex；
-1234box-orient：horizon">
+<meta name="description" content="两种布局方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS3布局">
 <meta property="og:url" content="http://aqianduan.github.io/blog/2017/03/12/CSS3布局/index.html">
 <meta property="og:site_name" content="My Life">
-<meta property="og:description" content="弹性布局：flexbox优点：1 适应性强，在做不同屏幕分辨率的界面时非常实用2 可以随意按照宽度、比例划分元素的宽高3 可以轻松改变元素的显示顺序4 弹性布局实现快捷，易维护
-display : box； 将一个元素的子元素以弹性布局进行布局123display : box；display : flexbox；    display : flex；
-1234box-orient：horizon">
-<meta property="og:updated_time" content="2017-03-12T13:12:46.895Z">
+<meta property="og:description" content="两种布局方式">
+<meta property="og:updated_time" content="2017-03-13T06:12:31.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3布局">
-<meta name="twitter:description" content="弹性布局：flexbox优点：1 适应性强，在做不同屏幕分辨率的界面时非常实用2 可以随意按照宽度、比例划分元素的宽高3 可以轻松改变元素的显示顺序4 弹性布局实现快捷，易维护
-display : box； 将一个元素的子元素以弹性布局进行布局123display : box；display : flexbox；    display : flex；
-1234box-orient：horizon">
+<meta name="twitter:description" content="两种布局方式">
 
 
 
@@ -336,14 +330,22 @@ display : box； 将一个元素的子元素以弹性布局进行布局123displa
       
 
       
-        <a id="more"></a>
+        <p>两种布局方式<br><a id="more"></a></p>
 <h1 id="弹性布局：flexbox"><a href="#弹性布局：flexbox" class="headerlink" title="弹性布局：flexbox"></a>弹性布局：flexbox</h1><p>优点：<br>1 适应性强，在做不同屏幕分辨率的界面时非常实用<br>2 可以随意按照宽度、比例划分元素的宽高<br>3 可以轻松改变元素的显示顺序<br>4 弹性布局实现快捷，易维护</p>
 <p>display : box； 将一个元素的子元素以弹性布局进行布局<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">display : box；</div><div class="line">display : flexbox；    </div><div class="line">display : flex；</div></pre></td></tr></table></figure></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">box-orient：horizontal(横向) | vertical(竖向) | inherit(继承)   子元素的排列方式</div><div class="line">box-direction：normal(正常 ) | reverse(反向) | inherit(继承)  子元素的排列顺序</div><div class="line">box-align：start(靠左) | end(靠右) | center(居中)   子元素的对齐方式</div><div class="line">box-pack：start(顶部) | end(底部) | center(居中)   子元素的对齐方式</div></pre></td></tr></table></figure>
 <p>子元素如何分配剩余空间<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">box-flex：number ;</div></pre></td></tr></table></figure></p>
 <p>在默认情况下，盒子并不具有弹性。如果对box-flex的属性值进行了设置，则变得富有弹性<br>如果没有固定盒子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">子盒大小  = 父盒大小 * (子盒box-flex值 / 所有子盒box-flex值之和)</div></pre></td></tr></table></figure></p>
-<blockquote><p>属性总结:</p>
+<blockquote><p>属性总结:<br>display : box ;      将一个元素的子元素以弹性布局进行布局<br>box-orient：子元素的排列方式（横向或者竖向）<br>box-direction：子元素的排列顺序<br>box-align：子元素的对齐方式<br>box-pack：子元素的对齐方式<br>box-flex：子元素如何分配剩余空间（在子元素设置）<br>box-ordinal-group：子元素显示顺序（在子元素设置）<br>扩展：<a href="http://segmentfault.com/a/1190000000707526" target="_blank" rel="external">http://segmentfault.com/a/1190000000707526</a></p>
 </blockquote>
+<h1 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h1><p>响应式布局是将已有的开发技巧（弹性网格布局、弹性图片、媒体和媒体查询）整合起来，命名为响应式网页设计，是一种针对任意设备对网页内容进行“完美”布局的一种显示机制。<br>简言之，是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。</p>
+<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p>多终端视觉和操作体验风格统一<br>兼容当前及未来新设备<br>节约了开发成本，维护成本也降低很多</p>
+<h2 id="劣势"><a href="#劣势" class="headerlink" title="劣势"></a>劣势</h2><p>兼容性：低版本浏览器兼容性有问题<br>移动带宽流量：相比较手机定制网站，流量稍大，但比较加载一个完整pc端网站显然是小得多<br>代码累赘，会出现隐藏无用的元素，加载时间加长<br>在设计的初期就要考虑的页面如何在多终端显示，兼容各种设备工作量大</p>
+<h2 id="响应式实现"><a href="#响应式实现" class="headerlink" title="响应式实现"></a>响应式实现</h2><p>1、CSS3-media Query（媒体查询）<br>2、 javascript<br>3、第三方开源框架 如：Bootstrap</p>
+<h2 id="css语法"><a href="#css语法" class="headerlink" title="css语法"></a>css语法</h2><h3 id="外联CSS语法"><a href="#外联CSS语法" class="headerlink" title="外联CSS语法"></a>外联CSS语法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=<span class="string">"stylesheet"</span> media=<span class="string">"mediatype and|not|only (media feature)"</span> href=<span class="string">"mystylesheet.css"</span>&gt;</div></pre></td></tr></table></figure>
+<p>媒体类型：mediatype<br>关键字：and|not|only<br>媒体特征：media feature</p>
+<h3 id="内嵌样式的语法"><a href="#内嵌样式的语法" class="headerlink" title="内嵌样式的语法"></a>内嵌样式的语法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media mediatype and|not|only (media feature) &#123; ... &#125;</div></pre></td></tr></table></figure>
+<p>媒体类型：mediatype<br>关键字：and|not|only<br>媒体特征：media feature</p>
 <hr>
 <blockquote>
 <p>文章标题：<a href="http://aqianduan.github.io/blog/2017/03/12/CSS3布局/" title="CSS3布局">CSS3布局</a><br>文章作者：<a href="https://aqianduan.github.io/" title="Brian.M">Brian.M</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
@@ -384,6 +386,10 @@ display : box； 将一个元素的子元素以弹性布局进行布局123displa
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2017/03/13/圣杯布局/" rel="prev" title="圣杯布局">
+                圣杯布局 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -477,7 +483,7 @@ display : box； 将一个元素的子元素以弹性布局进行布局123displa
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -559,7 +565,7 @@ display : box； 将一个元素的子元素以弹性布局进行布局123displa
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#弹性布局：flexbox"><span class="nav-number">1.</span> <span class="nav-text">弹性布局：flexbox</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#弹性布局：flexbox"><span class="nav-number">1.</span> <span class="nav-text">弹性布局：flexbox</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式布局"><span class="nav-number">2.</span> <span class="nav-text">响应式布局</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#优势"><span class="nav-number">2.1.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#劣势"><span class="nav-number">2.2.</span> <span class="nav-text">劣势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式实现"><span class="nav-number">2.3.</span> <span class="nav-text">响应式实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css语法"><span class="nav-number">2.4.</span> <span class="nav-text">css语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#外联CSS语法"><span class="nav-number">2.4.1.</span> <span class="nav-text">外联CSS语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内嵌样式的语法"><span class="nav-number">2.4.2.</span> <span class="nav-text">内嵌样式的语法</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
