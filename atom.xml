@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aqianduan.github.io/"/>
-  <updated>2017-03-13T07:31:37.166Z</updated>
+  <updated>2017-03-17T06:52:07.633Z</updated>
   <id>http://aqianduan.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JQ留言板</title>
+    <link href="http://aqianduan.github.io/blog/2017/03/17/JQ%E7%95%99%E8%A8%80%E6%9D%BF/"/>
+    <id>http://aqianduan.github.io/blog/2017/03/17/JQ留言板/</id>
+    <published>2017-03-17T06:43:13.000Z</published>
+    <updated>2017-03-17T06:52:07.633Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>JQ实现留言板功能</p>
+<a id="more"></a>
+<p>JQ实现留言板功能–&gt;<a href="https://cdn.rawgit.com/Aqianduan/JQmessage-board/30dca274/%E7%95%99%E8%A8%80JQ%E7%89%88.html" target="_blank" rel="external">JQ留言板</a></p>
+<p>代码如下：</p>
+<p>html部分：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div id=<span class="string">"out"</span>&gt;</div><div class="line">	&lt;div&gt;姓名：&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> id=<span class="string">"text1"</span>&gt;&lt;/div&gt;</div><div class="line">	&lt;div&gt;内容：&lt;textarea id=<span class="string">"text2"</span>&gt;&lt;/textarea&gt;&lt;/div&gt;</div><div class="line">	&lt;div id=<span class="string">"txt"</span>&gt;还可以输入&lt;span id=<span class="string">"number"</span>&gt;200&lt;/span&gt;个字&lt;/div&gt;</div><div class="line">	&lt;div&gt;&lt;input <span class="built_in">type</span>=<span class="string">"button"</span> value=<span class="string">"发布留言"</span> id=<span class="string">"text3"</span>&gt;&lt;/div&gt;</div><div class="line">	&lt;div&gt;</div><div class="line">		&lt;h3&gt;显示留言&lt;/h3&gt;</div><div class="line">		&lt;ul id=<span class="string">"list"</span>&gt;</div><div class="line">			&lt;!-- &lt;li&gt;</div><div class="line">				&lt;h6&gt;张三&lt;a href=<span class="string">"javascript:;"</span>&gt;X&lt;/a&gt;&lt;/h6&gt;</div><div class="line">				&lt;p&gt;今天去你家玩&lt;/p&gt;</div><div class="line">			&lt;/li&gt; --&gt;</div><div class="line">		&lt;/ul&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>JQ部分：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(<span class="function"><span class="title">function</span></span> ()&#123;</div><div class="line">	$(<span class="string">'#text3'</span>).click(<span class="function"><span class="title">function</span></span> ()&#123;</div><div class="line">		<span class="keyword">if</span> ($(<span class="string">'#text2'</span>).val().length&gt;200) &#123;</div><div class="line">			$(<span class="string">'#text2'</span>).val($(<span class="string">'#text2'</span>).val().substr(0,200));</div><div class="line">		&#125;;</div><div class="line">		<span class="keyword">if</span> ($(<span class="string">'#text1'</span>).val()==<span class="string">''</span>||$(<span class="string">'#text2'</span>).val()==<span class="string">''</span>)&#123;</div><div class="line">			alert(<span class="string">'亲，你还没有输入名字或者内容'</span>);</div><div class="line">		&#125; <span class="keyword">else</span>&#123;</div><div class="line">			var str=<span class="string">'&lt;li style="display:none;"&gt;&lt;h6&gt;'</span>+$(<span class="string">'#text1'</span>).val()+<span class="string">'&lt;a href="javascript:;"&gt;X&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;'</span>+$(<span class="string">'#text2'</span>).val()+<span class="string">'&lt;/p&gt;&lt;/li&gt;'</span>;</div><div class="line">			$(<span class="string">'#list'</span>).prepend(str);</div><div class="line">			$(<span class="string">'#list li'</span>).slideDown();</div><div class="line">			$(<span class="string">'#text1,#text2'</span>).val(<span class="string">''</span>);</div><div class="line">			$(<span class="string">'#number'</span>).html(<span class="string">'200'</span>);</div><div class="line">			$(<span class="string">'#txt'</span>).css(<span class="string">'color'</span>,<span class="string">'#ccc'</span>);</div><div class="line">		&#125;</div><div class="line">		$(<span class="string">'#list a'</span>).click(<span class="function"><span class="title">function</span></span> ()&#123;</div><div class="line">			var i=$(this).index();</div><div class="line">			$(this).parent().parent().slideUp(<span class="function"><span class="title">function</span></span> ()&#123;</div><div class="line">				$(this).remove();</div><div class="line">			&#125;);</div><div class="line">		&#125;)</div><div class="line">	&#125;)</div><div class="line">	var time=null;</div><div class="line">	<span class="keyword">function</span> <span class="function"><span class="title">jishu</span></span>() &#123;</div><div class="line">		var length=$(<span class="string">'#text2'</span>).val().length;</div><div class="line">		var len=200;</div><div class="line">		len=len-length;</div><div class="line">		<span class="keyword">if</span> (len&lt;0) &#123;</div><div class="line">			$(<span class="string">'#txt'</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>);</div><div class="line">		&#125; <span class="keyword">else</span>&#123;</div><div class="line">			$(<span class="string">'#txt'</span>).css(<span class="string">'color'</span>,<span class="string">'#ccc'</span>);</div><div class="line">		&#125;;</div><div class="line">		$(<span class="string">'#number'</span>).html(len);</div><div class="line">	&#125;</div><div class="line">	$(<span class="string">'#text2'</span>).focus(<span class="function"><span class="title">function</span></span> ()&#123;</div><div class="line">		time=<span class="built_in">set</span>Interval(jishu,50);</div><div class="line">	&#125;)</div><div class="line">	$(<span class="string">'#text2'</span>).blur(<span class="function"><span class="title">function</span></span> ()&#123;</div><div class="line">		clearInterval(time);</div><div class="line">	&#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://aqianduan.github.io/blog/2017/03/17/JQ留言板/" title="JQ留言板">JQ留言板</a><br>文章作者：<a href="https://aqianduan.github.io/" title="Brian.M">Brian.M</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;JQ实现留言板功能&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JQuery" scheme="http://aqianduan.github.io/categories/JQuery/"/>
+    
+    
+      <category term="留言板" scheme="http://aqianduan.github.io/tags/%E7%95%99%E8%A8%80%E6%9D%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>刮奖</title>
