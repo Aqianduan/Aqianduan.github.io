@@ -1,7 +1,7 @@
 # aqianduan.gitHub.io
 
 *   个人博客的 Public Html 代码。
-*   Hexo 源码请参考[HexoBlog](https://github.com/cylong1016/HexoBlog "HexoBlog")。
+*   Hexo 源码请参考[HexoBlog](https://github.com/Aqianduan/Aqianduan.github.io)。
 
 # 感谢
 
