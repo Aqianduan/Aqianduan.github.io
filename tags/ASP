@@ -1,0 +1,102 @@
+ASP
+1、Asp语法：
+Asp文件包含html标签，类似html文件，也可以包含服务器脚本，asp语言用<%...%>包围起来。
+1.1输出语句
+<html>
+<body>
+<%
+response.write(“hello world!”)
+%>
+</body>	
+</html>
+1.2 第二种方式
+<html>
+<body>
+<% =”Hello World!”%>
+</body>	
+</html>
+1.3	 asp中使用JS
+<%@ language=”javascript” %>
+<html>
+<body>
+<%
+Response.Write(“Hello World”)
+%>
+</body>
+</html>
+
+2、asp变量
+2.1  声明变量
+<%
+dim name
+name="Donald Duck"
+response.write("My name is: " & name)
+%>
+2.2	声明数组
+Dim fname(5),i
+	fname(0) = "A"
+	fname(0) = "B"
+	fname(0) = "C"
+	fname(0) = "D"
+	fname(0) = "E"
+	fname(0) = "F"
+	
+	For i = 0 to 5
+		Response.Write(fname(i) & "</br>")
+	Next
+2.3	时间的问候语
+var d = new Date()
+	var h = d.getHours()
+	
+	Response.Write("<p>")
+	Response.Write(d+"(Beijing Time)")
+	Response.Write("</p>")
+	if (h < 12)
+		{
+		Response.Write("Good Moring!")
+		}
+		else
+		{
+		Respone.Write("Good Day")
+		}
+2.4 循环生成html标题
+<html>
+<body>
+<%
+dim i 
+for i=1 to 6
+   response.write("<h" & i & ">Header " & i & "</h" & i & ">")
+next
+%>
+</body>
+</html>
+
+3 asp程序
+<%@ language=”javascript” %> //JS写法
+<html>
+<head>
+<%
+Function jsproc (num1,num2)    //定义函数名字传参num1和num2
+{
+Response.Write(num1*num2)   //定义方法
+}
+%>
+
+</head>
+<body>
+<p>Result: <%jsproc(3,4)%></p>   //在html中调用函数 jsproc（）
+</body>
+</html>
+
+4 表单和用户输入
+Html表单
+4.1	get方式取回表单中的数据
+Request.QueryString ：get方法传送的信息是对所有用户可见的，发送信息量有限制
+4.2	post方式取回表单中的数据
+Request.Form：表单传送的的信息对用户不可见，对发送的信息量也没有限制
+
+
+
+5 Cookie
+
+创建cookie ： Response.Cookie(“firstname”)=”A”
