@@ -35,11 +35,11 @@ response.write("My name is: " & name)
 2.2	声明数组
 Dim fname(5),i
 	fname(0) = "A"
-	fname(0) = "B"
-	fname(0) = "C"
-	fname(0) = "D"
-	fname(0) = "E"
-	fname(0) = "F"
+	fname(1) = "B"
+	fname(2) = "C"
+	fname(3) = "D"
+	fname(4) = "E"
+	fname(5) = "F"
 	
 	For i = 0 to 5
 		Response.Write(fname(i) & "</br>")
@@ -99,4 +99,90 @@ Request.Form：表单传送的的信息对用户不可见，对发送的信息�
 
 5 Cookie
 
-创建cookie ： Response.Cookie(“firstname”)=”A”
+创建cookie ： Response.Cookie(“firstname”)=”A” // 创建了cookie名字firstname 取值A
+分配属性给cookie ：  
+<%
+	Response.Cookie(“firstname”)=”A”
+	Response.Cookie("firstname").Expires= #May 10,2020#
+%> 
+调用cookie的值 ：Request.Cookie()
+<%
+fname = Request.Cookie("firstname")="Alex"
+response.write("Firstname="& fname")
+%>
+
+5.1 带有key的cookie值
+
+
+<html>
+<body>
+<%
+
+Response.Cookies("user")("firstname")="John"
+Response.Cookies("user")("lastname")="ad"
+Response.Cookies("user")("country")="China"
+Response.Cookies("user")("age")="25"
+
+dim x,y
+ for each x in Request.Cookies
+  response.write("<p>")
+  if Request.Cookies(x).HasKeys then
+    for each y in Request.Cookies(x)
+      response.write(x & ":" & y & "=" & Request.Cookies(x)(y))
+      response.write("<br />")
+    next
+  else
+    Response.Write(x & "=" & Request.Cookies(x) & "<br />")
+  end if
+  response.write "</p>"
+next
+%>
+</body>
+</html>
+
+
+6 session对象
+session 对象 ：用于储存用户信息。储存在session对象中的变量持有单一用户信息，在一个程序中得多有页面都可以用到session中的数据
+
+6.1 Session何时开始
+1、当某个用户请求了一个ASP文件，并且Global.asa文件引用Session_OnStart子程序时
+2、当某个值存在Session变量中时
+3、当某个用户请求了一个ASP文件，并且Global.asa使用<object>标签通过session的scope来示例某个对象时；
+
+6.2 Session 何时结束
+1、假如用户没有在规定的时间内在应用程序请求或者页面刷新，session就会结束。默认值为20min
+2、可以设置时间间隔，Timeout属性
+
+设置5min超越时间间隔：
+<%
+	Session.Timeout = 5
+%>
+立即结束：Abandon方法：
+<%
+	Session.Abandon
+%>
+注：使用session不易存储大量数据，因为我们不知道何时让session方法结束，过早用户会一遍一遍重新开始，时间太长浪费服务器资源。
+
+6.2	存储和取回session变量
+session优点可在其中储存变量供后续网页读取，应用范围广
+<%
+	Session("username")="Donald Duck"
+	Session("age")=50
+%>
+
+可以在session对象中保存参数来决定向用户返回什么页面。
+假设用户使用低显示器分辨率，则返回纯文本版本页面：
+<%If Session ("csreenres")="low" Then%>
+This is the text version of the page
+<%End If%>
+
+6.3	移除session变量
+contents集合包含所有的session变量
+可以通过remove方法来移除session变量
+例：如果session变量中age的值小于18，则移除session变量“sale”
+<%
+	If Session.Contents("age")<18 Then
+		Session.Contents.Remove("sale")
+	End If
+%>
+
