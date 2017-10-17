@@ -218,19 +218,52 @@ Next
 application与session相同点：都是用来储存和访问来自页面的任何页面的变量
 application与session不同点：application对象时所有人公用，session时一一对应
 
+
+8	#include 指令用于在多重页面上创建需重复使用的函数、页眉、页脚或者其他元素等。
 在ASP中引用文件，把#include标签放在注释标签中：
 <!--#include virtual = "somefilename"-->
 或者：
 <!--#include file= "somefilename"-->
-	
 
-7.1	关键词Virtual
+
+8.1	使用 #include 指令
+创建一个page.asp文件
+<html> 
+<body> 
+<h2>Words of Wisdom:</h2>
+<p><!--#include file="dom.inc"--></p> 
+<h2>The time is:</h2>
+<p><!--#include file="time.inc"--></p>
+</body> 
+</html>
+
+在创建一个time.inc 文件
+<%
+	Response.Write(Time)
+%>
+
+创建一个dom.inc 文件
+"One should never increase, beyond what is necessary,
+the number of entities required to explain anything."
+
+结果：
+<html>
+<body>
+<h2>Words of Wisdom:</h2>
+<p>"One should never increase, beyond what is necessary,
+the number of entities required to explain anything."</p>
+<h2>The time is:</h2>
+<p>11:33:42 AM</p>
+</body>
+</html>
+
+8.2	关键词Virtual
 关键词 virtual 指示路径以虚拟目录开始。
 如果 "header.inc" 文件位于虚拟目录 /html 中，下面这行代码会插入文件 "header.inc" 中的内容：
 
 <!-- #include virtual ="/html/header.inc" -->
 
-7.2	关键词 File
+8.3	关键词 File
 关键词 File 指示一个相对的路径。相对路径起始于含有引用文件的目录。
 假设文件位于 html 文件夹的子文件夹 headers 中，下面这段代码可引用 "header.inc" 文件的内容：
 <!-- #include file ="headers\header.inc" -->
@@ -238,6 +271,47 @@ application与session不同点：application对象时所有人公用，session�
 您也可以使用关键词 file 和语法 (..\) 来引用上级目录中的文件。
 
 
+9	Global.asa 文件
+Global.asa 文件是一个可选的文件，它可包含可被 ASP 应用程序中每个页面访问的对象、变量以及方法的声明。
 
-8	#include 指令用于在多重页面上创建需重复使用的函数、页眉、页脚或者其他元素等。
-8.1	
+9.1	global.asa 事件
+Application_OnStart:第一个用户请求asp页面时发生
+Session_OnStart:当新用户请求asp应用程序中首个页面时发生
+Session_OnEnd:当结束session时发生
+Application_OnEnd:在最后以为用户结束session时发生
+
+
+global.asa文件
+<script language="vbscript" runat="server">
+
+sub Application_OnStart
+  'some code
+end sub
+
+sub Application_OnEnd
+  'some code
+end sub
+
+sub Session_OnStart
+  'some code
+end sub
+
+sub Session_OnEnd
+  'some code
+end sub
+
+</script>
+注：无法使用<%%> 所以只能借助<script></script>标签
+
+9.2	<object>声明
+可以通过<object>标签在global.asa文件中创建带有session和application作用域的对象
+注：<object>对象位于<script>标签之外
+语法：
+<object runat="server" scope="scope" id="id" {progid = "progID" | classid="classID"}>
+...
+</object>
+
+scope :设置对象的作用域（作用范围）（Session 或者 Application）。
+id :为对象指定一个唯一的 id。
+ProgID :与 ClassID 关联的 id。ProgID 的格式是：[Vendor.]Component[.Version]。 ProgID 或 ClassID 必需被指定。
+ClassID :为 COM 类对象指定唯一的 id。 ProgID 或 ClassID 必需被指定。
