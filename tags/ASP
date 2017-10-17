@@ -1,7 +1,7 @@
 ASP
-1、Asp语法：
+1、	Asp语法：
 Asp文件包含html标签，类似html文件，也可以包含服务器脚本，asp语言用<%...%>包围起来。
-1.1输出语句
+1.1	输出语句
 <html>
 <body>
 <%
@@ -9,13 +9,13 @@ response.write(“hello world!”)
 %>
 </body>	
 </html>
-1.2 第二种方式
+1.2 	第二种方式
 <html>
 <body>
 <% =”Hello World!”%>
 </body>	
 </html>
-1.3	 asp中使用JS
+1.3	asp中使用JS
 <%@ language=”javascript” %>
 <html>
 <body>
@@ -26,7 +26,7 @@ Response.Write(“Hello World”)
 </html>
 
 2、asp变量
-2.1  声明变量
+2.1  	声明变量
 <%
 dim name
 name="Donald Duck"
@@ -59,7 +59,7 @@ var d = new Date()
 		{
 		Respone.Write("Good Day")
 		}
-2.4 循环生成html标题
+2.4 	循环生成html标题
 <html>
 <body>
 <%
@@ -71,7 +71,7 @@ next
 </body>
 </html>
 
-3 asp程序
+3 	asp程序
 <%@ language=”javascript” %> //JS写法
 <html>
 <head>
@@ -88,7 +88,7 @@ Response.Write(num1*num2)   //定义方法
 </body>
 </html>
 
-4 表单和用户输入
+4 	表单和用户输入
 Html表单
 4.1	get方式取回表单中的数据
 Request.QueryString ：get方法传送的信息是对所有用户可见的，发送信息量有限制
@@ -97,7 +97,7 @@ Request.Form：表单传送的的信息对用户不可见，对发送的信息�
 
 
 
-5 Cookie
+5 	Cookie
 
 创建cookie ： Response.Cookie(“firstname”)=”A” // 创建了cookie名字firstname 取值A
 分配属性给cookie ：  
@@ -111,9 +111,7 @@ fname = Request.Cookie("firstname")="Alex"
 response.write("Firstname="& fname")
 %>
 
-5.1 带有key的cookie值
-
-
+5.1	 带有key的cookie值
 <html>
 <body>
 <%
@@ -186,3 +184,60 @@ contents集合包含所有的session变量
 	End If
 %>
 
+6.4 	遍历 contents 集合
+contents 集合包含所有的 session 变量。可通过遍历 contents 集合，来查看其中存储的变量：
+<%
+Session("username")="Donald Duck"
+Session("age")=50
+dim i 
+For Each i in Session.Contents
+	Response.Write(i & "<br />")
+Next
+%>
+查看contents集合中项目数量，可使用count属性：
+<%
+	dim i 
+	dim j
+	j = Session.Contents.Count
+	Response.Write("Session variables:" & j)
+	For i = 1 to j 
+		Response.Write(Session.contents(i) & "<br />")
+	Next
+%>
+
+6.5 	遍历 StaticObjects 集合
+可通过循环 StaticObjects 集合，来查看存储在 session 对象中所有对象的值：
+
+<%
+dim i
+For Each i in Session.StaticObjects
+  Response.Write(i & "<br />")
+Next
+%>
+7	Application：共同完成某项任务的一组asp程序，application对象将这些文件捆绑起来
+application与session相同点：都是用来储存和访问来自页面的任何页面的变量
+application与session不同点：application对象时所有人公用，session时一一对应
+
+在ASP中引用文件，把#include标签放在注释标签中：
+<!--#include virtual = "somefilename"-->
+或者：
+<!--#include file= "somefilename"-->
+	
+
+7.1	关键词Virtual
+关键词 virtual 指示路径以虚拟目录开始。
+如果 "header.inc" 文件位于虚拟目录 /html 中，下面这行代码会插入文件 "header.inc" 中的内容：
+
+<!-- #include virtual ="/html/header.inc" -->
+
+7.2	关键词 File
+关键词 File 指示一个相对的路径。相对路径起始于含有引用文件的目录。
+假设文件位于 html 文件夹的子文件夹 headers 中，下面这段代码可引用 "header.inc" 文件的内容：
+<!-- #include file ="headers\header.inc" -->
+注意：被引用文件的路径是相对于引用文件的。假如包含 #include 声明的文件不在 html 目录中，这个声明就不会起效。
+您也可以使用关键词 file 和语法 (..\) 来引用上级目录中的文件。
+
+
+
+8	#include 指令用于在多重页面上创建需重复使用的函数、页眉、页脚或者其他元素等。
+8.1	
