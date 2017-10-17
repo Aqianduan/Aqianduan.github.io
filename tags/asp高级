@@ -1,0 +1,55 @@
+ASP Response 对象用于从服务器向用户发送输出的结果。
+1.  使用asp写文本
+<html> 
+<body> 
+<%
+	Response.Write("Hello World!")
+%>
+</body> 
+</html>
+
+2.  在 ASP 中使用 HTML 标签格式化文本
+<html> 
+<body> 
+<%
+response.write("<h2>可以使用 HTML 标签来格式化文本</h2>")
+%>
+<%
+response.write("<p style='color:red'>这段文本的样式是通过 style 属性添加的。</p>")
+%>
+</body> 
+</html>
+
+3.  将用户重定向至不同的 URL
+
+4.  随机链接
+<html>
+<body>
+<%
+randomize()
+r=rnd()
+if r>0.5 then
+  response.write("<a href='http://aqiandua.github.io'>MY BLOG!</a>")
+else
+  response.write("<a href='http://www.news.cn'>news.cn!</a>")
+end if
+%>
+<p>
+本例演示一个链接，每当您加载本页时，就会显示两个链接之一：W3School.com.cn! 或 news.cn！各占百分之五十的几率。
+</p>
+</body>
+</html>
+
+5.  检测用户是否与服务器连接
+
+<html>
+<body>
+<%
+If Response.IsClientConnected=true then
+Response.Write("用户仍然保持连接。")
+else
+Response.Write("用户未连接。")
+end if
+%>
+</body>
+</html>
