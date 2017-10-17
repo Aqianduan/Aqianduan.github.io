@@ -311,6 +311,7 @@ end sub
 ...
 </object>
 
+9.3	<object>参数属性：
 scope :设置对象的作用域（作用范围）（Session 或者 Application）。
 id :为对象指定一个唯一的 id。
 ProgID :与 ClassID 关联的 id。ProgID 的格式是：[Vendor.]Component[.Version]。 ProgID 或 ClassID 必需被指定。
