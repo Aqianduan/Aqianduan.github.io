@@ -28,7 +28,7 @@ Sever.ScriptTimeout[=NumSeconds] '脚本在被终止前可运行的最大秒数
 
 
 
-	ASPError对象的属性
+ASPError对象的属性
 
 	ASPError.ASPCode() 			属性返回由 IIS 生成的错误代码
 	ASPError.ASPDescription() 	属性返回错误的详细描述。
@@ -65,7 +65,7 @@ Sever.ScriptTimeout[=NumSeconds] '脚本在被终止前可运行的最大秒数
 	%>
 
 	
-	ASP FileSystemObject 对象
+ASP FileSystemObject 对象
 	FileSystemObject对象用于访问服务器上的系统文件.此对象可对文件夹.文件.目录路径经行操作.也可通过此对象获取文件系统信息.
 
 	创建一个文本文件 (c:\test.txt):
@@ -97,3 +97,79 @@ Sever.ScriptTimeout[=NumSeconds] '脚本在被终止前可运行的最大秒数
 	2.CopyFile 方法从一个位置向另一个位置拷贝一个或多个文件。
 	语法：
 	FileSystemObject.CopyFile source,destination[,overwrite]
+	参数:
+	source		必需的。要拷贝的文件（可使用通配符）。
+	destination	必需的。拷贝文件的目的地（不能使用通配符）。
+	overwrite	可选的。规定是否可覆盖已有的文件。True 允许覆盖已有文件，False 可防止已有文件被覆盖。默认为 True 
+
+	实例:
+		<%
+			dim fs
+				set fs=Server.CreateObject("Scripting.FileSystemObject")
+				fs.CopyFile "c:\mydocuments\web\*.htm","c:\webpages\"
+			set fs=nothing
+		%>
+
+	3.CopyFolder 方法从一个位置向另外一个位置复制一个或多个文件夹。
+	语法：
+	FileSystemObject.CopyFolder source,destination[,overwrite]
+	参数:
+	source	可选的。需拷贝的文件夹（可使用通配符）。
+	destination	必需的。拷贝文件夹的目的地（不可使用通配符）。
+	overwrite	可选的。规定是否可覆盖已有的文件夹。True 允许覆盖已有文件夹，False 可防止已有文件夹被覆盖。默认为 True 。
+	实例:
+	把 c:\mydocuments\web 中的所有文件夹拷贝到文件夹 c:\webpages 中：
+	<%
+		dim fs
+			set fs=Server.CreateObject("Scripting.FileSystemObject")
+			fs.CopyFolder "c:\mydocuments\web\*","c:\webpages\"
+		set fs=nothing
+	%>
+	仅把文件夹 test 从 c:\mydocuments\web 拷贝到文件夹 c:\webpages 中：
+	<%
+		dim fs
+			set fs=Server.CreateObject("Scripting.FileSystemObject")
+			fs.CopyFolder "c:\mydocuments\web\test","c:\webpages\"
+		set fs=nothing
+	%>
+	
+	4.CreateFolder 方法创建一个新文件夹。
+	http://www.w3school.com.cn/asp/met_createfolder.asp
+	
+	5.GetBaseName 方法返回指定路径中的文件或文件夹的基准名称。
+	http://www.w3school.com.cn/asp/met_getbasename.asp
+	
+	6.GetDrive 方法可返回由 drivespec 参数规定的 Drive 对象。
+	http://www.w3school.com.cn/asp/met_getdrive.asp
+	
+	7.GetDriveName 方法返回一个字符串，该值是指定路径的驱动器名称。
+	http://www.w3school.com.cn/asp/met_getdrivename.asp
+	
+	8.GetExtensionName 方法返回包含指定路径中最后成分的文件扩展名的字符串。
+	http://www.w3school.com.cn/asp/met_getextensionname.asp
+	
+	9.GetFile 方法返回指定路径的 File 对象。
+	http://www.w3school.com.cn/asp/met_getfile.asp
+	
+	10.GetFileName 方法返回包含指定路径中最后成分的文件名或文件夹名的字符串。
+	http://www.w3school.com.cn/asp/met_getfilename.asp
+	
+	11.GetFolder 方法返回指定路径的 Folder 对象。
+	http://www.w3school.com.cn/asp/met_getfolder.asp
+	
+	12.GetParentFolderName 方法返回指定的路径中最后成分的父文件夹的名称
+	http://www.w3school.com.cn/asp/met_getparentfoldername.asp
+	
+	13.GetTempName 方法返回一个随机产生的临时文件或文件夹。
+	http://www.w3school.com.cn/asp/met_gettempname.asp
+	
+	14.MoveFile 方法把一个或多个文件从一个位置移动到另一个位置。
+	http://www.w3school.com.cn/asp/met_movefile.asp
+	
+	15.MoveFolder 方法从一个位置向另一个位置移动一个或多个文件夹。
+	http://www.w3school.com.cn/asp/met_movefolder.asp
+	
+	16.OpenTextFile 方法打开指定的文件，并返回可用来访问此文件的 TextStream 对象。
+	http://www.w3school.com.cn/asp/met_opentextfile.asp
+	
+	
