@@ -1,0 +1,99 @@
+Sever.ScriptTimeout[=NumSeconds] '脚本在被终止前可运行的最大秒数
+	1.取回ScriptTimeout属性当前值:
+	<%
+		response.write(Server.Scriptimeout)
+	%>
+	2.设置脚本的超时:
+	<%
+		Server.ScriptTimeout = 200
+	%>
+	
+	Server.CreateObject(progID)
+	1.本例创建服务器组件MSWC.AdRotator的一个实例:
+	<%
+		Set	adrot = Server.CreateObject("MSWC.AdRotator")
+	%>
+	2.当会话结束时,存储在变量session中的对象就会被破坏.可以通过设置变量为nothing或者给变量赋值来破坏对象
+	<%
+		session("ad")= Nothing
+	%>
+	&&
+	<%
+		session("ad")="a new value"
+	%>
+	3.不能创建鱼内建对象相同名字的实例.
+	<%
+		Set Application = Server.CreatObject("Application")
+	%>
+
+
+
+	ASPError对象的属性
+
+	ASPError.ASPCode() 			属性返回由 IIS 生成的错误代码
+	ASPError.ASPDescription() 	属性返回错误的详细描述。
+	ASPError.Category() 		属性返回错误源（错误是由 IIS 、脚本语言还是组件产生的？）
+	ASPError.Column() 			属性返回产生错误的 ASP 文件中的列位置。
+	ASPError.Description() 		属性返回关于错误的简要描述。
+	ASPError.File() 			属性返回产生错误的 ASP 文件的名称。
+	ASPError.Line() 			属性返回产生错误的 ASP 文件中的行位置。
+	ASPError.Number() 			属性返回错误的标准 COM 错误代码。
+	ASPError.Source()  			属性返回错误发生行的实际源代码。
+	
+	实例:
+	<%
+		dim objErr
+		set objErr=Server.GetLastError()
+
+		response.write("ASPCode=" & objErr.ASPCode)
+		response.write("<br />")
+		response.write("ASPDescription=" & objErr.ASPDescription)
+		response.write("<br />")
+		response.write("Category=" & objErr.Category)
+		response.write("<br />")
+		response.write("Column=" & objErr.Column)
+		response.write("<br />")
+		response.write("Description=" & objErr.Description)
+		response.write("<br />")
+		response.write("File=" & objErr.File)
+		response.write("<br />")
+		response.write("Line=" & objErr.Line)
+		response.write("<br />")
+		response.write("Number=" & objErr.Number)
+		response.write("<br />")
+		response.write("Source=" & objErr.Source)
+	%>
+
+	
+	ASP FileSystemObject 对象
+	FileSystemObject对象用于访问服务器上的系统文件.此对象可对文件夹.文件.目录路径经行操作.也可通过此对象获取文件系统信息.
+
+	创建一个文本文件 (c:\test.txt):
+	然后向这个文件写一些文本：
+	<%
+		dim fs,fname
+			set fs =Server.CreateObject("Scriping.FileSystemObject")
+			set fname = fs.CreateTextFile("c
+			:\test.txt",true)
+			fname.WriteLine("Hello World!")
+			fname.Close
+		set fname = nothing
+		set fs = nothing
+	%>
+	1.BuildPath 方法向已有的路径添加名称。
+	语法：
+	[newpath=]FileSystemObject.BuildPath(path,name)
+	实例:
+	<%
+		dim fs,path
+			set fs=Server.CreateObject("Scripting.FileSystemObject")
+			path=fs.BuildPath("c:\mydocuments","test")
+			response.write(path)
+		set fs=nothing
+	%>
+	输出：
+	c:\mydocuments\test
+
+	2.CopyFile 方法从一个位置向另一个位置拷贝一个或多个文件。
+	语法：
+	FileSystemObject.CopyFile source,destination[,overwrite]
