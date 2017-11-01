@@ -31,10 +31,10 @@ Sever.ScriptTimeout[=NumSeconds] '脚本在被终止前可运行的最大秒数
 ASPError对象的属性
 
 	ASPError.ASPCode() 			属性返回由 IIS 生成的错误代码
-	ASPError.ASPDescription() 	属性返回错误的详细描述。
-	ASPError.Category() 		属性返回错误源（错误是由 IIS 、脚本语言还是组件产生的？）
+	ASPError.ASPDescription() 		属性返回错误的详细描述。
+	ASPError.Category() 			属性返回错误源（错误是由 IIS 、脚本语言还是组件产生的？）
 	ASPError.Column() 			属性返回产生错误的 ASP 文件中的列位置。
-	ASPError.Description() 		属性返回关于错误的简要描述。
+	ASPError.Description() 			属性返回关于错误的简要描述。
 	ASPError.File() 			属性返回产生错误的 ASP 文件的名称。
 	ASPError.Line() 			属性返回产生错误的 ASP 文件中的行位置。
 	ASPError.Number() 			属性返回错误的标准 COM 错误代码。
